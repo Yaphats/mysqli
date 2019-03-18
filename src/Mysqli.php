@@ -544,7 +544,8 @@ class Mysqli
             return null;
         }
         $newRes = Array();
-        for ($i = 0; $i < $this->affectRows; $i++) {
+        $affectRows = count($res);
+        for ($i = 0; $i < $affectRows; $i++) {
             $newRes[] = $res[$i]['retval'];
         }
         return $newRes;
